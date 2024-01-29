@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Everyday Coffee</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Fredericka+the+Great&family=Mochiy+Pop+One&family=Zen+Kaku+Gothic+Antique&family=Zen+Maru+Gothic&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script> // bxSliderプラグインの初期化
+    $(document).ready(function () {
+      $(".mainVisual__slideshow").bxSlider({
+        auto: true,
+        mode: 'fade',
+        speed: 2000,
+        pager: false,//ページャーの非表示
+        controls: false,//前後のコントロールボタン非表示
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $(".service__slider").slick({
+        autoplay: true,//自動スクロール
+        autoplaySpeed: 0,//自動再生時のスライド切り替えの時間
+        speed: 3000,//スライドが流れるスピード
+        arrows: false,//左右の矢印を非表示
+        swipe: false,//スワイプ禁止
+        slidesToshow: 5,//表示するスライドの数
+        cssEase: 'linear',//画像切り替えのアニメーション”linearは等速”
+        pauseOnFocus: false,//フォーカスしても止めない
+        pauseOnHover: false,//マウスホバーしても止めない
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img class="header_logo" src="img/header_logo.png" alt="Maeda Coffeeロゴ"></a>
+    <ul>
+      <li><a href="#pickUpSection">PICK UP</a></li>
+      <li><a href="#aboutUsSection">ABOUT US</a></li>
+      <li><a href="#serviceSection">SERVICE</a></li>
+      <li><a href="#contactSection">CONTACT</a></li>
+    </ul>
+  </header>
+  <main class="main-container">
+    <div class="mainVisualSection">
+      <div class="mainVisual__slideshow">
+        <img src="img/mainVisual_bgImg1.jpg">
+        <img src="img/mainVisual_bgImg2.jpg">
+        <img src="img/mainVisual_bgImg3.jpg">
+        <img src="img/mainVisual_bgImg4.jpg">
+      </div>
+      <div class="mainVisualSection__title">
+        <h1 class="mainVisualSection__title1">Everyday COFFEE</h1>
+        <h2 class="mainVisualSection__title2">コーヒーで、生活に彩りを。</h2>
+      </div>
+    </div>
+    <div id="pickUpSection">
+      <div class="pickUpSection__wrapper">
+        <div class="titleGroup">
+          <h2 class="title__logo">PICK UP</h2>
+          <p class="title__subtitle">よみもの</p>
+        </div>
+        <div class="pickUp__articleWrap">
+          <div class="pickUp__article">
+            <img src="img/article_img1.jpg">
+            <h3 class="pickUp__articleTitle">どんな淹れ方があるの？</h3>
+            <p class="pickUp__articleDesc">自分でコーヒーを淹れてみたいと思っているけど、淹れ方にはどんな種類があるのだろうと思っている方、意外と多いようです。<br>
+              自分に合ったコーヒーの淹れ方を見つけてみましょう。</p>
+          </div>
+          <div class="pickUp__article">
+            <img src="img/article_img2.jpg">
+            <h3 class="pickUp__articleTitle">誰とどこで楽しみますか？</h3>
+            <p class="pickUp__articleDesc">自宅で、職場で、おしゃれなカフェで。一人でのんびり、友達とワイワイ･･･。<br>
+              楽しむ場所は人それぞれです。<br>
+              自分だけのとっておきのコーヒータイムを探してみませんか。</p>
+          </div>
+          <div class="pickUp__article">
+            <img src="img/article_img3.jpg">
+            <h3 class="pickUp__articleTitle">豆にはどんな種類がある？</h3>
+            <p class="pickUp__articleDesc">本格的にコーヒーを楽しむために、コーヒー豆の産地や種類などの知識を深めていくと、きっと新しいコーヒーの楽しみ方を見つけられるはず。<br>
+              ここでは、奥深いコーヒー豆の世界をご紹介します。</p>
+          </div>
+          <div class="pickUp__article">
+            <img src="img/article_img4.jpg">
+            <h3 class="pickUp__articleTitle">コーヒーは健康に良い？</h3>
+            <p class="pickUp__articleDesc">コーヒーに含まれるカフェインが、肥満が発症の原因となる２型糖尿病の発症リスクを減らすという報告があります。<br>
+              美味しいコーヒーが健康に良いのであれば、こんなに嬉しいことはないですね！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="aboutUsSection">
+      <div class="aboutUsSection__wrapper">
+        <div class="titleGroup">
+          <h2 class="title__logo">ABOUT US</h2>
+          <p class="title__subtitle">わたしたちについて</p>
+        </div>
+        <div class="aboutUsArea">
+          <img src="img/office_img.jpg"  alt="オフィス写真">
+          <div class="aboutUs__content">
+            <h3 class="aboutUs__contentTitle">あらゆるところにコーヒーを届けたい。</h3>
+            <p class="aboutUs__contentDesc">私達の仕事はコーヒー豆や一杯のコーヒーを届けることではありません。<br>
+              あくまでもコーヒーは手段であり、コーヒーという手段を使って、あらゆる場所のあらゆる人々の暮らしを豊かにすること。<br>
+              それこそが我々 Maeda Coffee のミッションです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="serviceSection">
+      <div class="serviceSection__wrapper">
+        <div class="titleGroup">
+          <h2 class="title__logo">SERVICE</h2>
+          <p class="title__subtitle">サービス</p>
+        </div>
+        <div class="service__slider">
+          <img src="img/service_img1.jpg" alt="コーヒーショップ">
+          <img src="img/service_img2.jpg" alt="デリバリー">
+          <img src="img/service_img3.jpg" alt="通信販売">
+          <img src="img/service_img4.jpg" alt="カスタマーサポート">
+          <img src="img/service_img5.jpg" alt="季節行事">
+          <img src="img/service_img6.jpg" alt="コーヒー農家を守りたい">
+        </div>
+      </div>
+    </div>
+    <div id="contactSection">
+      <div class="contactSection__wrapper">
+        <div class="titleGroup">
+          <h2 class="title__logo">CONTACT</h2>
+          <p class="title__subtitle">お問い合わせ</p>
+        </div>
+        <form class="formArea">
+          <div class="formArea__item">
+            <label class="formLabel">お名前</label>
+            <input class="formInput" type="text" name="name">
+          </div>
+          <div class="formArea__item">
+            <label class="formLabel">メール</label>
+            <input class="formInput" type="email" name="email">
+          </div>
+          <div class="formArea__item">
+            <label class="formLabel">電話番号</label>
+            <input class="formInput" type="tel" name="tel">
+          </div>
+          <div class="formArea__item">
+            <label class="formLabel">内&emsp;容</label>
+            <textarea class="formInput__textArea"></textarea>
+          </div>
+        </form>
+        <div class="formArea__btn">
+          <input type="submit" value=" 送&emsp;信">
+        </div>
+      </div>
+    </div>
+    <a class="pagetopIcon" href="#">↑TOP</a>
+  </main>
+  <footer>© 2023 Maeda Coffee</footer>
+</body>
+
+</html>

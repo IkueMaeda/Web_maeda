@@ -1,0 +1,302 @@
+/*デフォルトCSSのリセット*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*bxSliderの初期CSSを打ち消す*/
+.bx-wrapper {
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  background: none !important;
+}
+
+/*スムーススクロール*/
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  font-family: Aoboshi One;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #CC9966;
+  text-decoration: underline;
+}
+
+header {
+  background-color: #1ED9CC;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  /*ヘッダーを常に表示させておく*/
+  z-index: 1;
+  /*スライドショーの上ににヘッダーを表示*/
+}
+
+.header_logo {
+  height: 70px;
+  padding-left: 24px;
+}
+
+header ul {
+  font-family: Aoboshi One;
+  font-size: 18px;
+  display: flex;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-right: 24px;
+  list-style: none;
+  column-gap: 32px;
+  float: right;
+}
+
+.header li {
+  margin: 60px;
+}
+
+.main-container {
+  padding-top: 70px;
+  /*ヘッダーを固定させるとスライドショーが隠れるのでヘッダー分下げる*/
+}
+
+.serviceSection__wrapper,
+.contactSection__wrapper {
+  margin: 128px auto;
+}
+
+.pickUpSection__wrapper,
+.aboutUsSection__wrapper {
+  width: 1120px;
+  margin: 128px auto;
+}
+
+.mainVisualSection {
+  position: relative;
+}
+
+/*スライドショーする画像の幅を100％に設定*/
+.mainVisual__slideshow img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.mainVisualSection__title {
+  width: 992px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mainVisualSection__title1 {
+  font-family: Fredericka the Great;
+  font-weight: normal;
+  font-size: 114px;
+  color: white;
+  text-shadow: black 10px 10px 5px;
+  text-align: center;
+}
+
+.mainVisualSection__title2 {
+  font-family: Zen Maru Gothic;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+
+.titleGroup {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.title__logo {
+  font-family: Aoboshi One;
+  font-weight: normal;
+  font-size: 48px;
+
+}
+
+.title__subtitle {
+  font-family: Zen Maru Gothic;
+  font-size: 20px;
+}
+
+#pickUpSection {
+  scroll-margin-top: 128px;
+  /*スクロールコンテナーの上側の辺からみた外部の距離を指定*/
+}
+
+.pickUp__articleWrap {
+  display: flex;
+  gap: 32px;
+  /*行や列の間のすき間を定義(row-gapおよびcolumn-gap の一括指定)*/
+}
+
+.pickUp__articleTitle {
+  text-align: center;
+  font-family: Zen Maru Gothic;
+  font-size: 18px;
+  text-shadow: #9e9478 1px 5px 7px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.pickUp__articleDesc {
+  font-family: Zen Maru Gothic;
+  font-size: 14px;
+  line-break: normal;
+  /*テキストにおいて句読点や記号を用いた場合の改行規則(禁則処理)を設定*/
+}
+
+.pickUp__article img {
+  border-radius: 8px;
+  /*画像の角を丸く*/
+}
+
+#aboutUsSection {
+  background-image: url("../img/aboutUs_bgImg.jpg");
+  background-size: cover;
+  display: flow-root;
+  /*marjin部分にも背景画像が出るように*/
+}
+
+.aboutUsArea {
+  display: flex;
+  align-items: center;
+}
+
+.aboutUsArea img {
+  border-radius: 8px;
+  margin-right: 128px;
+}
+
+.aboutUs__contentTitle {
+  font-family: Zen Kaku Gothic Antique;
+  font-size: 30px;
+  margin-bottom: 48px;
+}
+
+.aboutUs__contentDesc {
+  font-family: Zen Kaku Gothic Antique;
+  font-size: 20px;
+  width: 502px;
+  height: 169px;
+}
+
+#serviceSection {
+  scroll-margin-top: 128px;
+  overflow-x: hidden;
+}
+
+.service__slider {
+  width: 292px;
+}
+
+.service__slider img {
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+.service__slider img:hover {
+  transform: scale(1.2);
+  /*スライド画像にhoverしたら画像拡大*/
+  transition: 0.3s;
+  /*滑らかに拡大*/
+  cursor: not-allowed;
+  /*カーソルを合わせると進入禁止みたいなマークが出る*/
+}
+
+#contactSection {
+  background-image: url("../img/contact_bgImg.jpg");
+  background-size: cover;
+  display: flow-root;
+  /*marjin部分にも背景画像が出るように*/
+}
+
+.formArea__item {
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  /*formLabelがformImputの枠の上下中央に来るように*/
+  justify-content: center;
+  /*formAreaの水平中央に来るように ※wrapperにwidth指定してもmargin:auto;でセンターにはなる*/
+}
+
+.formLabel {
+  font-family: Zen Maru Gothic;
+  font-size: 20px;
+  float: left;
+  place-items: center;
+  /*align-itemsやjustify-itemsの一括指定*/
+  width: 160px;
+}
+
+.formInput {
+  width: 576px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formInput__textArea {
+  width: 576px;
+  height: 196px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formArea__btn {
+  text-align: center;
+}
+
+input[type="submit"] {
+  width: 260px;
+  height: 50px;
+  border-radius: 8px;
+  font-family: Mochiy Pop One;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #1ED9CC;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #1ED9CC;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Aoboshi One;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 21px;
+}
+
+.pagetopIcon {
+  height: 60px;
+  width: 90px;
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  background: #6b3f31;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #3f312b;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  /*hoverのアニメーションを0.3秒かけて行う ※hoverの疑似要素ではない方に指定*/
+}
+
+.pagetopIcon:hover {
+  background: #330000;
+  font-size: 20px;
+}
